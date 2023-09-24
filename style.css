@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #c9cec9;
+}
+body h1{
+    text-align: center;
+    background-color: #05386b;
+    width: 300px;
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%); */
+    padding: 20px;
+    margin: 20px auto 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: all .14s ease-in-out;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 30px;
+}
+body h1:hover{
+    filter: brightness(150%);
+    
+}
+body .container{
+    width: 90%;
+    margin: 5% auto auto auto;
+    display: flex;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:  20px;
+
+}
+    .container .library{
+        /* min-width: 300px;
+        max-width: 500px; */
+        height: auto;
+    display: flex;
+    width: auto;
+    padding: 3%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #e7e7e7;
+    transition: all .3s;
+}
+.container .library:hover{
+    transform:  scale(1.03);
+}
+.container .book-name{
+font-family: 'Outfit', sans-serif;
+font-size: 22px;
+height: 100%;
+text-transform: uppercase;
+width: 100%;
+text-align: center;
+font-weight: bold;
+}
+.container .author-name{
+    font-family: 'Quicksand';
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    max-height: 100px;
+    text-wrap: wrap;
+
+}
+.container span{
+    width: 100% ;
+    display: block;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.container span .pages{
+    font-family: 'Montserrat Alternates';
+}
+.container span .type{
+    font-family: 'poppins';
+}
+.library .remove{
+    color: dodgerblue;
+    font-size: 20;
+    font-family: 'Montserrat Alternates';
+    cursor: pointer;
+}
+/* Form  */
+
+.modal-container{
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 53%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -53%);
+}
+
+.show-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    background-color: white;
+    box-shadow:  0 0 10px rgba(0, 0, 0 ,0.8);
+    max-width: 95%;
+    width: 500px;
+    margin: auto;
+    animation: modalopen 2s;
+    position: absolute;
+}
+#close-modal{
+    position: relative;
+    top: 4px;
+    color: rgb(18, 18, 18);
+    left: 92%;
+    cursor: pointer;
+    font-size: 20px;
+    /* background-color: white; */
+    padding: 10px;
+}
+.modal-header{
+    background-color: #05386b;
+    color: white;
+    padding: 15px;
+}
+h3{
+    margin: 0;
+    font-family: 'outfit', sans-serif;
+}
+.radio{
+    justify-content: center;
+    align-items: center;
+}
+.zero{
+    display: flex;
+    width: 200px;
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+}
+@keyframes modalopen{
+    from{
+        opacity: 0;
+    }
+    to{
+            opacity: 1;
+    }
+};
+.modal-content{
+    padding: 20px;
+    background-color: whitesmoke;
+}
+.form-grouop{
+    height: 55px;
+}
+form input{
+    width: 80%;
+    padding: 5px;
+    border: 2px solid ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #05386b ;
+    display: block;
+    margin: auto;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+.form-label{
+    /* color: rgb(107, 107, 107); */
+
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    display: block;
+    margin: 10px 0 10px 20px;
+}
+button{
+    width: 100px;
+    background-color: #05386b;
+    text-align: center;
+    margin: 20px 20px;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    color: white;
+}
+button:hover{
+    filter: brightness(120%);
+}
+@media only screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+    }
+    .container .library{
+        width: 100%;
+        padding: .5%;
+    }
+    .container .book-name{
+        font-size: 16px;
+    }
+    .modal-container{
+        width: 100%;
+        position: fixed;
+        display: none;
+        top: 50%;;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+    }
+    
+    .show-modal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal{
+        background-color: white;
+        box-shadow:  0 0 10px rgba(0, 0, 0 ,0.8);
+        width: 100%;
+        margin: auto;
+        animation: modalopen 2s;
+        position: absolute;
+    }
+}

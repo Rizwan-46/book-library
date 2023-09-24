@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+        <h1 id="show-modal">Add Book</h1>
+    <div class="container" id="bookmark-container">
+        <!-- <div class="library">
+            <h2 class="book-name">The Alchimest</h2>
+            <h4 class="author-name">The Alchimest</h4>
+            <span>  
+                <p class="type">Fiction</p>
+                <p class="pages">Pages 150</p>
+            </span>
+        </div> -->
+    </div>
+
+    <!-- Form -->
+    <div class="modal-container" id="modal-1">
+        <div id="modal" class="modal">
+            <i class="fa-regular fa-circle-xmark" id="close-modal"></i>
+            <div class="modal-header">
+                <h3>Add Book</h3>
+            </div>
+            <div class="modal-content">
+                <form id="bookmark-form">
+                    <!-- Website Name -->
+                    <div class="form-group">
+                        <label for="book-Name" class="form-label" id="">Title</label>
+                        <input type="text" class="form-output" id="book-name" placeholder="Book Name">
+                    </div>
+                    <!-- Website URL -->
+                    <div class="form-group">
+                        <label for="author-Name" class="form-label" id="author-name">Author</label>
+                        <input type="text" class="form-output" id="author-Name" placeholder="Aurthor">
+                    </div>
+                    <!-- Pages -->
+                    <div class="form-group">
+                        <label for="pages" class="form-label" id="number-pages">Pages</label>
+                        <input type="number" class="form-output" id="pages" placeholder="Pages">
+                    </div>
+                    <div class="radio">
+                        <div class="zero">
+                            <input type="radio" name="read" id="read" value="Read" checked>
+                            Read
+                            <input type="radio" name="read" id="unread" value="Unread">
+                            Unread
+                        </div>
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
